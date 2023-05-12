@@ -30,6 +30,9 @@ We've utilized a straightforward Python script to establish the binding and pack
 ### Node-RED
 Node-RED has been employed to create an User Interface (UI) for data visualization fetching data from InfluxDB. The JSON file detailing the flow is located within the 'NodeRED' folder.
 
+### LoRaWAN_End_Node
+LoRaWAN_End_Node, contains the essential files required for configuring the end node for our LoRaWAN network with the updated code for analyzing RSSI and SNR. 
+
 ### Testing
 Performed on a limited dataset:
 - Uplink packet reliability: 98%

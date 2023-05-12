@@ -1,0 +1,56 @@
+<block>
+  <name>Frame src</name>
+  <key>lora_sdr_frame_src</key>
+  <category>[LoRa_mu]</category>
+  <import>import lora_sdr</import>
+  <make>lora_sdr.frame_src($sf, $pay_len, $delay, $offset, $cfo, $n_frames, $os_factor, $rand_sto)</make>
+  <param>
+    <name>Sf</name>
+    <key>sf</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Pay_len</name>
+    <key>pay_len</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Delay</name>
+    <key>delay</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Offset</name>
+    <key>offset</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Cfo</name>
+    <key>cfo</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>N_frames</name>
+    <key>n_frames</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Os factor</name>
+    <key>os_factor</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Rand sto</name>
+    <key>rand_sto</key>
+    <type>bool</type>
+  </param>
+  <source>
+    <name>signal</name>
+    <type>complex</type>
+  </source>
+  <source>
+    <name>symb</name>
+    <type>short</type>
+    <optional>true</optional>
+  </source>
+</block>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<block>
+  <name>mu_demod</name>
+  <key>lora_sdr_mu_demod</key>
+  <category>[LoRa_mu]</category>
+  <import>import lora_sdr</import>
+  <make>lora_sdr.mu_demod($sf, $Ku)</make>
+   <param>
+     <name>Sf</name>
+     <key>sf</key>
+     <type>int</type>
+   </param>
+   <param>
+     <name>Ku</name>
+     <key>Ku</key>
+     <type>int</type>
+   </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+   <source>
+     <name>S1</name>
+     <type>short</type>
+   </source>
+   <source>
+     <name>S2</name>
+     <type>short</type>
+ </source>
+ <source>
+     <name>SNR</name>
+     <type>float</type>
+   </source>
+</block>

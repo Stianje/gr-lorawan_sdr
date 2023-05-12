@@ -1,0 +1,35 @@
+<block>
+  <name>Mu detection</name>
+  <key>lora_sdr_mu_detection</key>
+  <category>[LoRa_mu]</category>
+  <import>import lora_sdr</import>
+  <make>lora_sdr.mu_detection($sf, $os_factor, $snr_threshold)</make>
+  <param>
+    <name>Sf</name>
+    <key>sf</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Os_factor</name>
+    <key>os_factor</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Snr_threshold</name>
+    <key>snr_threshold</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <sink>
+    <name>noise_est</name>
+    <type>message</type>
+    <optional>true</optional>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

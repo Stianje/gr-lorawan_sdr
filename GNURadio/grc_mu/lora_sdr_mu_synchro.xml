@@ -1,0 +1,35 @@
+<block>
+  <name>Mu synchro</name>
+  <key>lora_sdr_mu_synchro</key>
+  <category>[LoRa_mu]</category>
+  <import>import lora_sdr</import>
+  <make>lora_sdr.mu_synchro($sf, $os_factor, $len)</make>
+  <param>
+    <name>Sf</name>
+    <key>sf</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Os_factor</name>
+    <key>os_factor</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Len</name>
+    <key>len</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+  <source>
+    <name>sync_state</name>
+    <type>int</type>
+    <optional>true</optional>
+  </source>
+</block>

@@ -1,0 +1,46 @@
+<block>
+  <name>Signal detector</name>
+  <key>lora_sdr_signal_detector</key>
+  <category>[LoRa_mu]</category>
+  <import>import lora_sdr</import>
+  <make>lora_sdr.signal_detector($sf, $os_factor, $threshold, $margin, $fft_symb, $transp_len)</make>
+
+  <param>
+    <name>Sf</name>
+    <key>sf</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Os_factor</name>
+    <key>os_factor</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Threshold</name>
+    <key>threshold</key>
+    <type>real</type>
+  </param>
+  <param>
+    <name>Margin</name>
+    <key>margin</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Fft_symb</name>
+    <key>fft_symb</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Transp_len</name>
+    <key>transp_len</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

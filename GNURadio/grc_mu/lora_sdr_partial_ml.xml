@@ -1,0 +1,35 @@
+<block>
+  <name>Partial ml</name>
+  <key>lora_sdr_partial_ml</key>
+  <category>[LoRa_mu]</category>
+  <import>import lora_sdr</import>
+  <make>lora_sdr.partial_ml($sf, $_id)</make>
+  <param>
+    <name>Sf</name>
+    <key>sf</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Id</name>
+    <key>_id</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+    <vlen>2**${sf}</vlen>
+  </source>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+    <vlen>2**${sf}</vlen>
+  </source>
+</block>

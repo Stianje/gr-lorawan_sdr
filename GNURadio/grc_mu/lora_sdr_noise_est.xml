@@ -1,0 +1,20 @@
+<block>
+  <name>Noise est</name>
+  <key>lora_sdr_noise_est</key>
+  <category>[LoRa_mu]</category>
+  <import>import lora_sdr</import>
+  <make>lora_sdr.noise_est($n_samples)</make>
+  <param>
+    <name>N_samples</name>
+    <key>n_samples</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>noise_est</name>
+    <type>message</type>
+  </source>
+</block>

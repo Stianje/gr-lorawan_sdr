@@ -28,7 +28,7 @@ We've utilized a straightforward Python script to establish the binding and pack
 ![pythoncoderxtx](https://github.com/Stianje/gr-lorawan_sdr/assets/119126968/08520bc4-5633-46f9-9d48-03cedb101a3a)
 
 ### Node-RED
-Node-RED has been employed to create an User Interface (UI) for data visualization. The JSON file detailing the flow is located within the 'NodeRED' folder.
+Node-RED has been employed to create an User Interface (UI) for data visualization fetching data from InfluxDB. The JSON file detailing the flow is located within the 'NodeRED' folder.
 
 ### Testing
 Performed on a limited dataset:

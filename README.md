@@ -30,6 +30,13 @@ We've utilized a straightforward Python script to establish the binding and pack
 ### Node-RED
 Node-RED has been employed to create an User Interface (UI) for data visualization. The JSON file detailing the flow is located within the 'NodeRED' folder.
 
+### Testing
+Performed on a limited dataset:
+- Uplink packet reliability: 98%
+- Downlink packet reliability:
+  - SF12: 66.67%
+  - SF7: 62.5%
+
 ### Future Work
 - Fine-tuning the Timing of downlink packets
 

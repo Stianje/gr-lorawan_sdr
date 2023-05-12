@@ -31,7 +31,7 @@ We've utilized a straightforward Python script to establish the binding and pack
 Node-RED has been employed to create an User Interface (UI) for data visualization fetching data from InfluxDB. The JSON file detailing the flow is located within the 'NodeRED' folder.
 
 ### LoRaWAN_End_Node
-LoRaWAN_End_Node, contains the essential files required for configuring the end node for our LoRaWAN network with the updated code for analyzing RSSI and SNR. 
+LoRaWAN_End_Node, contains the essential files required for configuring the end node for our LoRaWAN network with the updated code for analyzing RSSI and SNR. The files included in this repository form part of the I-CUBE-LRWAN LoRaWAN software expansion for STM32.
 
 ### Testing
 Performed on a limited dataset:

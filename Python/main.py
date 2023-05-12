@@ -261,30 +261,28 @@ def listener6():
 		process_thread = threading.Thread(target=send_packet_nettwork, args=(data, freq, sf))
 		process_thread.start()
 
-def MQTT_Handler():
-	Connected = False   #global variable for the state of the connection
 
-	broker_address= "localhost"         #Broker address
-	port = 1883                         #Broker port
-	user = ""                           #Connection username
-	password = ""                       #Connection password
+Connected = False   #global variable for the state of the connection
 
-	client = mqttClient.Client("Python")               #create new instance
-	client.username_pw_set(user, password=password)    #set username and password
-	client.on_connect= on_connect                      #attach function to callback
-	client.on_message= on_message                      #attach function to callback
+broker_address= "localhost"         #Broker address
+port = 1883                         #Broker port
+user = ""                           #Connection username
+password = ""                       #Connection password
 
-	client.connect(broker_address, port=port)          #connect to broker
+client = mqttClient.Client("Python")               #create new instance
+client.username_pw_set(user, password=password)    #set username and password
+client.on_connect= on_connect                      #attach function to callback
+client.on_message= on_message                      #attach function to callback
 
-	client.loop_start()          #start the loop
+client.connect(broker_address, port=port)          #connect to broker
 
-	while Connected != True:     #Wait for connection
-		time.sleep(0.1)
+client.loop_start()          #start the loop
 
-	client.subscribe("+/gateway/+/command/down")
+while Connected != True:     #Wait for connection
+	time.sleep(0.1)
 
+client.subscribe("+/gateway/+/command/down")
 
-MQTT_Handler()
 
 t1 = threading.Thread(target=listener1)
 t2 = threading.Thread(target=listener2)

@@ -3,7 +3,7 @@
 ![NodeRed](https://img.shields.io/badge/NodeRED-3.0.2-brightgreen)
 ![influxdb](https://img.shields.io/badge/InfluxDB-1.6.7-brightgreen)
 
-# Open-Source LoRaWAN System with SDR
+# Open-Source LoRaWAN System using SDR
 This repository contains the code, configuration files, and documentation for our project, where we developed an open-source LoRaWAN system using a Software-Defined Radio (SDR) communicating with traditional Commercial-Off-The-Shelf (COTS) end nodes. Using GNURadio with [gr-lora_sdr](https://github.com/tapparelj/gr-lora_sdr) LoRa transceiver, to accomplish the physical layer. This project was carried out by students at the University of Agder (UiA).
 
 ![Diagram](https://github.com/Stianje/gr-lorawan_sdr/assets/119126968/d1ad6958-8528-4efe-887d-7faff8b2579b)
@@ -29,6 +29,9 @@ We've utilized a straightforward Python script to establish the binding and pack
 
 ### Node-RED
 Node-RED has been employed to create an User Interface (UI) for data visualization. The JSON file detailing the flow is located within the 'NodeRED' folder.
+
+### Future Work
+- Fine-tuning the Timing of downlink packets
 
 ### Acknowledgments
 https://github.com/tapparelj/gr-lora_sdr

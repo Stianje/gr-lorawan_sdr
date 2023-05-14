@@ -86,8 +86,13 @@ def send_message_lora(phyPayload, delay, frequency, spreadingfactor):
 	if spreadingfactor == 7: 
 		delay = int(delay) - Delay_offset_Sf7 - elapsed_time_s
 		time.sleep(delay)
-		sock.send(bytes(formatted, encoding='utf-8'))	
-	
+		
+		#Experimental
+		print("SF7 - Waiting: ", delay)
+		for x in range(5):
+			time.sleep(0.02)
+			sock.send(bytes(formatted, encoding='utf-8'))	
+
 	print(f"{bcolors.OKBLUE}\nSending packet to GNURadio{bcolors.ENDC}")
 	print(f"{bcolors.WARNING}	PHYPayload: {bcolors.ENDC}", phyPayload, "\n")
 	print(f"{bcolors.WARNING}	Delay: {bcolors.ENDC}{delay:.4f}{bcolors.WARNING} - Frequency: {bcolors.ENDC}{frequency}{bcolors.WARNING} - SF: {bcolors.ENDC}{spreadingfactor}")

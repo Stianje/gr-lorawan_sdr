@@ -4,7 +4,7 @@
 ![influxdb](https://img.shields.io/badge/InfluxDB-1.6.7-brightgreen)
 
 # Open-Source LoRaWAN System using SDR
-This repository contains the code, configuration files, and documentation for our project, where we developed an open-source LoRaWAN system using a Software-Defined Radio (SDR) communicating with traditional Commercial-Off-The-Shelf (COTS) end nodes. Using GNURadio with [gr-lora_sdr](https://github.com/tapparelj/gr-lora_sdr) LoRa transceiver, to accomplish the physical layer. This project was carried out by students at the University of Agder (UiA).
+This repository contains our project's code, configuration files, and documentation. We developed an open-source LoRaWAN system using a Software-Defined Radio (SDR) communicating with traditional Commercial-Off-The-Shelf (COTS) end nodes. Using GNURadio with [gr-lora_sdr](https://github.com/tapparelj/gr-lora_sdr) LoRa transceiver to accomplish the physical layer. This project was carried out by students at the University of Agder (UiA).
 
 ![Diagram](https://github.com/Stianje/gr-lorawan_sdr/assets/119126968/d1ad6958-8528-4efe-887d-7faff8b2579b)
 
@@ -12,7 +12,7 @@ This repository contains the code, configuration files, and documentation for ou
 ### Features
 - Support for various frequencies and Spreading Factors (SFs)
 - Ability to handle multiple concurrent devices
-- System setup, including a SDR gateway, database, and user interface configuration
+- System setup, including an SDR gateway, database, and user interface configuration
 
 ### GNURadio
 To set up GNURadio, follow the installation instructions provided for [gr-lora_sdr](https://github.com/tapparelj/gr-lora_sdr). In addition to the standard setup, this project employs a USB interface instead of TCP, therfore also utilized [gr-osmosdr](https://osmocom.org/projects/gr-osmosdr/wiki/GrOsmoSDR) to ensure compatibility with our hardware. The 'GNURadio' directory houses a fully installed (excluding build folder), built upon [gr-lora_sdr](https://github.com/tapparelj/gr-lora_sdr). To use it effectively, please follow the installation instructions seen in 'GNURadio' folder. The GNURadio configuration can be found within the 'apps' subdirectory, named 'lora_bladerf.grc'. A generated Python file associated with this configuration, 'lora_bladerf.py', is also available. Sync word: 0x34 for LoRaWAN, check device documentation.
@@ -24,7 +24,7 @@ To set up GNURadio, follow the installation instructions provided for [gr-lora_s
 ![gnuradiotx](https://github.com/Stianje/gr-lorawan_sdr/assets/119126968/71e3f5c3-cc5d-41a6-8654-56391ecc9ed4)
 
 ### Python code
-We've utilized a straightforward Python script to establish the binding and packet formatting necessary for facilitating communication between GNURadio and the ChirpStack Gateway Bridge. This script can be accessed in the 'Python' directory.
+We have utilized a straightforward Python script to establish the binding and packet formatting necessary for facilitating communication between GNURadio and the ChirpStack Gateway Bridge. This script can be accessed in the 'Python' directory.
 ![pythoncoderxtx](https://github.com/Stianje/gr-lorawan_sdr/assets/119126968/08520bc4-5633-46f9-9d48-03cedb101a3a)
 
 ### Node-RED
